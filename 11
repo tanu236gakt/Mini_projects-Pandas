@@ -1,0 +1,11 @@
+#Vectorize Grade Calculation from final score
+
+def assign(score):
+    if (score >= 90): return 'A'
+    elif score >= 80 : return 'B'
+    elif score >= 70 : return 'C'
+    elif score >= 60 : return 'D'
+    else: return 'F'
+sd['calculated_grade'] = sd['final_score'].apply(assign)
+print("First 5 Calculated score:")
+print(sd[['final_score','calculated_grade']].head())
