@@ -1,0 +1,7 @@
+#Generate grade Boundaries using linspace for science Scores
+
+max_science = sd['science_original'].max()
+min_science = sd['science_original'].min()
+grade_boundaries = np.linspace(min_science,max_science,5)
+print("Science Grade Boundaries:")
+print(grade_boundaries)
