@@ -1,0 +1,10 @@
+# optimize memory usage for student performance Grades
+
+print(f"Original 'grade' dtype: {sd['grade'].dtype}")
+print("Before optimization memory usage:")
+print(sd['grade'].memory_usage(deep = True))     #by default deep value = false
+sd['grade'] = sd['grade'].astype('category')     #Category type me aap mathematical calculation nai perform kar sakte
+print(f"Optimized 'grade' dtype: {sd['grade'].dtype}")
+print("Memory usage after optimization :")
+print(sd['grade'].memory_usage(deep = True))
+#to perform calculation you have to again convert the categorized data into object for mathematical calculations
