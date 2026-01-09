@@ -1,0 +1,11 @@
+#optimize storage for math score using different integer types
+
+print(f"Original 'math' dtype: {sd['math_original'].dtype}")
+print("Before optimization memory usage:")
+print(sd['math_original'].memory_usage(deep = True)) 
+
+#2.math_original-> int8
+sd['math_int8_fixed'] = sd['math_original'].astype(np.int8)
+
+#3. Convert attendence -> uint8(correct)
+#print(f"'attendence_uint8' dtype:",{sd['attendance_uint8'].dtype})
