@@ -1,0 +1,7 @@
+#Normalized science_original scores using Broadcasting
+
+Min = sd['science_original'].min()
+Max = sd['science_original'].max()
+sd['science_normalized'] =(sd['science_original'] - Min)/(Max - Min)
+print("First 5 Normalized science Scores:")
+print(sd[['science_original','science_normalized']].head())
